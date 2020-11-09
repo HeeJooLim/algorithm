@@ -1,5 +1,6 @@
 # algorithm
-algorithm 공부
+algorithm 공부👩‍💻
+
 
 사이트
  - 백준알고리즘(https://www.acmicpc.net/)
