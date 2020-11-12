@@ -35,6 +35,7 @@ public class Main_1260 {
 		checked = new boolean[n+1];
 		System.out.println();
 		bfs();
+	
 		
 	}
 	
