@@ -1,8 +1,12 @@
 package algorithm_hj;
 
-
 import java.util.HashMap;
 
+/**
+ * 완주하지 못한 선수(해시)
+ * https://programmers.co.kr/learn/courses/30/lessons/42576
+ *
+ */
 public class Programmers_42576 {
 
 		static HashMap<String, Integer> map;
