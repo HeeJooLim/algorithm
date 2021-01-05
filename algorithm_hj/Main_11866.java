@@ -31,6 +31,6 @@ public class Main_11866 {
 		sb.append(queue.pop().toString() + ">");
 		System.out.print(sb);
 
-		
+		sc.close();
 	}
 }
