@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class DFS_BFS {
 	
-	public static int[][] arr; //간선 연결상태
-	public static boolean[] checked; // 확인여부
+	public static int[][] arr;
+	public static boolean[] checked; 
+	
 	public static int n;
 	public static int m;
 	public static int start;
@@ -15,12 +16,14 @@ public class DFS_BFS {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		n = sc.nextInt(); // 정점 개수
-		m = sc.nextInt(); // 간선 개수
-		start = sc.nextInt(); // 시작 번호
+		n = sc.nextInt(); 
+		m = sc.nextInt(); 
+		start = sc.nextInt();
+		
 		
 		arr = new int[1001][1001]; 
 		checked = new boolean[1001];
+		
 		
 		for(int i = 0; i < m; i++) {
 			int x = sc.nextInt();
@@ -38,8 +41,11 @@ public class DFS_BFS {
 
 	
 	public static void dfs(int start) {
+		
 		checked[start] = true;
+		
 		System.out.print(start + " ");
+		
 		for(int i = 1; i <=n; i++) {
 			if(arr[start][i] == 1 && checked[i] == false) {
 				dfs(i);
