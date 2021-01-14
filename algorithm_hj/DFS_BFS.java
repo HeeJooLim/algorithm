@@ -32,10 +32,11 @@ public class DFS_BFS {
 		}
 		sc.close();
 		
-		dfs(start);
+		//dfs(start);
 		
-		checked = new boolean[1001];
-		System.out.println();
+		//checked = new boolean[1001];
+		//System.out.println();
+		//dfs(1);
 		bfs();
 	}
 
@@ -43,7 +44,6 @@ public class DFS_BFS {
 	public static void dfs(int start) {
 		
 		checked[start] = true;
-		
 		System.out.print(start + " ");
 		
 		for(int i = 1; i <=n; i++) {
@@ -53,19 +53,26 @@ public class DFS_BFS {
 		}
 	}
 	
+	
+	
 	public static void bfs() {
-		Queue<Integer> queue = new LinkedList<Integer>();
+		Queue<Integer> queue =  new LinkedList<>();
 		
 		queue.offer(start);
 		checked[start] = true;
 		System.out.print(start + " ");
 		
-		for(int i = 1; i<=n; i++) {
-			if(checked[i] == false && arr[start][i] ==1) {
-				queue.add(i);
-				checked[i] = true;
-				System.out.print(i + " ");
+		while(!queue.isEmpty()) {
+			int temp = queue.poll();
+			for(int i = 1; i<= n; i++) {
+				if(checked[i] == false && arr[temp][i] == 1) {
+					queue.offer(i);
+					checked[i] = true;
+					System.out.print(i + " ");
+				}
 			}
 		}
 	}
+	
+	
 }

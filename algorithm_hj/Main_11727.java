@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main_11727 {
 	
-	static Integer[] dp;
+	static int[] dp;
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class Main_11727 {
 		int n =sc.nextInt();
 		sc.close();
 		
-		dp = new Integer[n+1];
+		dp = new int[n+1];
 		
 		dp[0] = 0;
 		dp[1] = 1;
@@ -23,10 +23,10 @@ public class Main_11727 {
 		} else {
 			for(int i = 3; i <= n; i++) {
 				int num = dp[i-1] + (dp[i-2]*2);
-				dp[i] = num % 10007;;
+				dp[i] = num % 10007;
 			}
 			
-			System.out.println(dp[n] );
+			System.out.println(dp[n]);
 		}
 		
 	}
